@@ -1,0 +1,19 @@
+paths = "tests"
+
+[profiles.headless]
+hidden = true
+extend-variables.HEADLESS="On"
+
+[profiles.headfull]
+[profiles.headfull.extend-variables]
+HEADLESS="Off"
+
+[profiles.test.extend-variables]
+APP_URL="localhost:3001"
+BROWSER="Chromium"
+
+[profiles.dev.extend-variables]
+APP_URL="localhost:3000"
+
+[profiles.dev-headless]
+inherits = ["dev", "headless"]

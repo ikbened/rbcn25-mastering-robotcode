@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on linux)" generated="2025-02-12T15:00:01.988164" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/workspaces/rbcn25-mastering-robotcode/tests">
+<suite id="s1-s1" name="First" source="/workspaces/rbcn25-mastering-robotcode/tests/first.robot">
+<test id="s1-s1-t1" name="First" line="16">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-12T15:00:02.124108" level="INFO">Hello there</msg>
+<arg>Hello there</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-12T15:00:02.123740" elapsed="0.000535"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-02-12T15:00:02.125509" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/workspaces/rbcn25-mastering-robotcode/results/browser/traces/temp/5054a4ba-c089-486e-8832-92b94c95379d"}</msg>
+<msg time="2025-02-12T15:00:02.131344" level="INFO">Starting Browser process /home/devcontainer/.local/share/hatch/env/virtual/demoproject/7oZHHRid/demoproject/lib/python3.13/site-packages/Browser/wrapper/index.js using port 40143</msg>
+<msg time="2025-02-12T15:00:02.131488" level="INFO">Node startup parameters: ['node', '/home/devcontainer/.local/share/hatch/env/virtual/demoproject/7oZHHRid/demoproject/lib/python3.13/site-packages/Browser/wrapper/index.js', '40143']</msg>
+<msg time="2025-02-12T15:00:02.845182" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/workspaces/rbcn25-mastering-robotcode/results/browser/traces/temp/5054a4ba-c089-486e-8832-92b94c95379d"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-02-12T15:00:02.124536" elapsed="0.721225"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-02-12T15:00:03.155076" level="INFO">Successfully initialized new page object and opened url: localhost:3001</msg>
+<msg time="2025-02-12T15:00:03.155380" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${APP_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-02-12T15:00:02.846854" elapsed="0.308792"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-02-12T15:00:03.156654" level="INFO">Types the text 'do something' in the given field.</msg>
+<arg>input[id="todo-input"]</arg>
+<arg>do something</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-12T15:00:03.155986" elapsed="0.059755"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-12T15:00:03.216593" level="INFO">Clicks the element 'button[id="add-todo-button"]'.</msg>
+<arg>button[id="add-todo-button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-12T15:00:03.216058" elapsed="0.052047"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-02-12T15:00:03.384166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-02-12T15:00:03.268456" elapsed="0.116017"/>
+</kw>
+<msg time="2025-02-12T15:00:03.387528" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-02-12T15:00:03.399364" level="INFO">Switching context to context=afef09fa-f146-4ab4-ad76-db15d4fb79ae in CURRENT</msg>
+<msg time="2025-02-12T15:00:03.404787" level="INFO">Successfully changed active context: context=afef09fa-f146-4ab4-ad76-db15d4fb79ae</msg>
+<msg time="2025-02-12T15:00:03.423694" level="INFO">Successfully closed Context</msg>
+<doc>Very important documentation</doc>
+<status status="PASS" start="2025-02-12T15:00:02.122433" elapsed="1.262402"/>
+</test>
+<doc>Suite documentation</doc>
+<meta name="app_url">localhost:3001</meta>
+<meta name="Browser">Chromium</meta>
+<meta name="Headless">No</meta>
+<status status="PASS" start="2025-02-12T15:00:02.007803" elapsed="1.417460"/>
+</suite>
+<status status="PASS" start="2025-02-12T15:00:01.990657" elapsed="1.438889"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="First" id="s1-s1" pass="1" fail="0" skip="0">Tests.First</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
